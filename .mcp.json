@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "C:\\Users\\eunta\\AppData\\Roaming\\npm\\mcp-server-filesystem.cmd",
+      "args": [],
+      "env": {}
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"],
+      "env": {}
+    },
+    "sequential-thinking": {
+      "command": "npx", 
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "env": {}
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"],
+      "env": {}
+    },
+    "serena": {
+      "command": "C:\\Users\\eunta\\.local\\bin\\serena-mcp-server.exe",
+      "args": [],
+      "env": {}
+    }
+  }
+}
