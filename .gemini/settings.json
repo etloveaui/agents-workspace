@@ -1,0 +1,59 @@
+{
+  "selectedAuthType": "oauth-personal",
+  "preferredEditor": "vscode",
+  "hasSeenIdeIntegrationNudge": true,
+  "showMemoryUsage": true,
+  "loadMemoryFromIncludeDirectories": true,
+  "folderTrust": true,
+  "folderTrustFeature": true,
+  "showLineNumbers": true,
+  "mcpServers": {
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "--root",
+        "C:\\Users\\eunta\\agents-workspace",
+        "--root",
+        "C:\\Users\\eunta\\.claude",
+        "--root",
+        "C:\\Users\\eunta\\.codex"
+      ]
+    }
+  },
+  "_disabledMcpServers": {
+    "_comment": "Modern UI component generation and design systems - disabled due to compatibility issues",
+    "_instructions": "Reason: Gemini API compatibility issues - function naming conflicts. Move to mcpServers section to enable.",
+    "magic": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@21st-dev/magic"
+      ],
+      "env": {
+        "TWENTYFIRST_API_KEY": ""
+      }
+    }
+  }
+}

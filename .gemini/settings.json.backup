@@ -1,0 +1,10 @@
+{
+  "selectedAuthType": "oauth-personal",
+  "preferredEditor": "vscode",
+  "hasSeenIdeIntegrationNudge": true,
+  "showMemoryUsage": true,
+  "loadMemoryFromIncludeDirectories": true,
+  "folderTrust": true,
+  "folderTrustFeature": true,
+  "showLineNumbers": true
+}

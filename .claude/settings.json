@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); printf \"$(whoami)@$(hostname -s):$(basename \"$(pwd)\") [$(echo \"$input\" | jq -r '.model.display_name')]\""
+  }
+}

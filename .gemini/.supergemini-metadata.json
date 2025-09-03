@@ -1,0 +1,56 @@
+{
+  "commands": {
+    "auto_update": false,
+    "enabled": true,
+    "version": "4.0.9"
+  },
+  "components": {
+    "commands": {
+      "category": "commands",
+      "files_count": 17,
+      "installed_at": "2025-09-03T11:00:16.713133",
+      "version": "4.0.9"
+    },
+    "core": {
+      "category": "core",
+      "files_count": 3,
+      "installed_at": "2025-09-03T11:00:16.541202",
+      "version": "4.0.9"
+    },
+    "mcp": {
+      "category": "integration",
+      "configured_servers": [
+        "sequential",
+        "context7",
+        "magic",
+        "serena",
+        "morphllm",
+        "playwright"
+      ],
+      "installed_at": "2025-09-03T11:01:04.652068",
+      "servers_configured": 6,
+      "version": "4.0.9"
+    },
+    "modes": {
+      "category": "modes",
+      "files_count": 4,
+      "installed_at": "2025-09-03T11:00:16.616537",
+      "version": "4.0.9"
+    }
+  },
+  "framework": {
+    "components": [
+      "core"
+    ],
+    "description": "AI-enhanced development framework for Gemini CLI",
+    "installation_type": "global",
+    "name": "SuperGemini",
+    "version": "4.0.9"
+  },
+  "supergemini": {
+    "auto_update": false,
+    "enabled": true,
+    "profile": "default",
+    "version": "4.0.9"
+  }
+}

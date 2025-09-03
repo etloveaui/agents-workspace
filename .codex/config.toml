@@ -1,0 +1,31 @@
+# SuperCodex 프로젝트 설정 (자동 생성)
+# 사용자: eunta
+# 프로젝트: agents-workspace
+
+# 신뢰 프로젝트
+[projects."C:\\Users\\eunta"]
+trust_level = "trusted"
+
+[projects."C:\\Users\\eunta\\agents-workspace"]
+trust_level = "trusted"
+
+# 승인 정책 및 샌드박스
+approval_policy = "never"
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+network_access = true
+
+[mcp_servers.filesystem]
+command = "npx"
+args = [
+  "-y", "@modelcontextprotocol/server-filesystem",
+  "--root", "C:/Users/eunta/agents-workspace",
+  "--root", "C:\\Users\\eunta\\.claude",
+  "--root", "C:\\Users\\eunta\\.gemini"
+]
+
+
+[mcp_servers.sequential]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-sequential-thinking"]
