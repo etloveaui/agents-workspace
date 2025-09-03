@@ -20,9 +20,9 @@ network_access = true
 command = "npx"
 args = [
   "-y", "@modelcontextprotocol/server-filesystem",
-  "--root", "C:/Users/eunta/agents-workspace",
-  "--root", "C:\\Users\\eunta\\.claude",
-  "--root", "C:\\Users\\eunta\\.gemini"
+  "--root", ".",
+  "--root", ".claude",
+  "--root", ".gemini"
 ]
 
 

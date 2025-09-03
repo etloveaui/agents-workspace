@@ -21,10 +21,11 @@ agents-workspace/
 │   ├── README.md                   # 메인 가이드
 │   └── .mcp.json                   # MCP 서버 설정
 │
-├── 🚀 동적 설정 스크립트 (핵심 혁신)
-│   ├── setup-claude.js             # SuperClaude 자동 설정
-│   ├── setup-codex.js              # SuperCodex 자동 설정  
-│   └── setup-gemini.js             # SuperGemini 자동 설정
+├── ⚙️ 설정 및 구성 파일 (실제 동작)
+│   ├── .mcp.json                   # 공통 MCP 서버 등록(stdio)
+│   ├── .claude/settings.json       # Claude 프로젝트 설정
+│   ├── .codex/config.toml          # Codex 프로젝트 설정
+│   └── .gemini/settings.json       # Gemini 프로젝트 설정
 │
 ├── 📚 표준화된 문서 체계
 │   ├── docs/
@@ -72,8 +73,9 @@ agents-workspace/
 
 #### 3. 크로스 AI 도구 통합
 - **신뢰 네트워크**: 각 AI 도구가 다른 도구의 설정 폴더에 접근 가능
-- **MCP 서버 공유**: filesystem, sequential-thinking, context7 등 공통 활용
-- **설정 동기화**: 한 번의 설정으로 모든 도구에서 활용 가능
+- **공통 MCP 서버**: filesystem, sequential-thinking, context7, playwright, serena, hello-mcp (.mcp.json 관리)
+- **Codex 전용 등록**: 필요 시 `.codex/config.toml`의 `mcp_servers.*`로 추가 등록
+- **설정 동기화**: 프로젝트 설정(.claude/.codex/.gemini)과 공통 MCP를 함께 사용
 
 ### 🔄 핵심 혁신: 동적 설정 시스템
 
@@ -94,14 +96,15 @@ path.join(homeDir, '.claude')  // 모든 컴퓨터에서 동작
 
 #### 실사용 시나리오
 ```bash
-# 회사 컴퓨터 (사용자명: eunta)
-node setup-claude.js    # → C:\Users\eunta\.claude\ 설정
+# 레포를 클론하면 프로젝트 설정 파일이 포함되어 있습니다.
+git clone [repository]
+cd agents-workspace
 
-# 집 컴퓨터 (사용자명: myname)  
-node setup-claude.js    # → C:\Users\myname\.claude\ 설정
-
-# Mac (사용자명: user)
-node setup-claude.js    # → /Users/user/.claude/ 설정
+# 각 도구는 자신의 설정 파일을 읽어 동작합니다.
+# - Claude:   프로젝트/.claude/settings.json
+# - Codex:    프로젝트/.codex/config.toml
+# - Gemini:   프로젝트/.gemini/settings.json
+# - MCP:      .mcp.json (공통 서버)
 ```
 
 ---
@@ -125,7 +128,7 @@ node setup-claude.js    # → /Users/user/.claude/ 설정
 
 ### 4. 문서화 체계화
 - **표준 규정**: 문서화 작성 표준과 AI 커뮤니케이션 가이드 수립
-- **작업 추적**: 모든 작업을 TodoWrite로 추적하고 기록
+- **작업 추적**: Codex 계획(update_plan) 기능 또는 이슈 트래커로 추적
 - **지식 축적**: 작업 과정과 결과를 체계적으로 문서화
 
 ---
@@ -136,18 +139,17 @@ node setup-claude.js    # → /Users/user/.claude/ 설정
 ```json
 전역 설정: ~/.claude/settings.json (statusLine 등)
 프로젝트 설정: 프로젝트/.claude/settings.local.json
-특징: MCP 서버 자동 감지, 크로스 도구 접근
+특징: MCP 서버 감지, 크로스 도구 접근(구성에 따름)
 실행: claude
 ```
 
 ### SuperCodex (Codex CLI)
-```toml  
+```toml
 전역 설정: ~/.codex/config.toml
 - [projects."path"] 신뢰 프로젝트 등록
-- [mcp_servers.filesystem] MCP 서버 설정
-- [profiles.analysis] 작업 모드별 프로필
-프로젝트 설정: 프로젝트/.codex/AGENTS.md + prompts/
-실행: codex --profile analysis
+- [mcp_servers.*] MCP 서버 등록
+프로젝트 설정: 프로젝트/.codex/config.toml, AGENTS.md, prompts/
+실행: codex
 ```
 
 ### SuperGemini (Gemini CLI)
@@ -167,14 +169,9 @@ node setup-claude.js    # → /Users/user/.claude/ 설정
 git clone [repository]
 cd agents-workspace
 
-# 모든 AI 도구를 한번에 설정
-node setup-claude.js
-node setup-codex.js  
-node setup-gemini.js
-
-# 즉시 사용 가능
+# 프로젝트 설정 파일이 포함되어 있어 즉시 사용 가능
 claude
-codex --profile analysis
+codex
 gemini
 ```
 
@@ -185,16 +182,24 @@ gemini
 # - ~/.claude, ~/.codex, ~/.gemini (크로스 참조)
 # - 공통 MCP 서버들 (filesystem, sequential-thinking, context7)
 
-# 작업 추적은 TodoWrite로 자동화
+# 작업 추적은 Codex 계획(update_plan) 기능 또는 이슈 트래커 사용
 # 문서화는 표준 규정에 따라 체계화
 ```
 
 ### 3. 문제 해결 시  
 ```bash
-# 설정 문제 → setup 스크립트 재실행
-# MCP 서버 문제 → 공통 설정으로 일관성 보장
-# 권한 문제 → 크로스 참조 설정으로 해결
+# 설정 문제 → .claude/.codex/.gemini 설정 파일 확인 및 세션 재시작
+# MCP 서버 문제 → .mcp.json 및 .codex/config.toml 의 mcp_servers 확인
+# 권한 문제 → 승인/샌드박스 정책 점검(on-request/never, workspace-write/danger-full-access)
 ```
+
+---
+
+## 운영 상 주의사항(런타임 정책 우선 원칙)
+
+- IDE/CLI 세션 시작 시 지정된 승인/샌드박스 정책이 설정 파일보다 우선할 수 있습니다.
+- `.codex/config.toml` 또는 전역 설정을 수정한 뒤에는 세션 재시작이 필요합니다.
+- Windows/WSL 병행 사용 시 경로 매핑(`C:\\` ↔ `/mnt/c`)을 유의하세요.
 
 ---
 
@@ -237,9 +242,9 @@ gemini
 
 | 기준 | 목표 | 현재 상태 | 달성도 |
 |------|------|-----------|---------|
-| **환경 독립성** | 다른 PC에서 쉽게 복원 | 1분 내 자동 설정 | ✅ 100% |
-| **도구 독립성** | AI 도구 업데이트 무관 | 실제 형식 준수 | ✅ 100% |
-| **크로스 통합** | AI 도구 간 협업 | 완전한 크로스 참조 | ✅ 100% |
+| **환경 독립성** | 다른 PC에서 쉽게 복원 | 1분 내 자동 설정 | ✅ 100% (현 워크스페이스 기준) |
+| **도구 독립성** | AI 도구 업데이트 무관 | 실제 형식 준수 | ✅ 100% (현 워크스페이스 기준) |
+| **크로스 통합** | AI 도구 간 협업 | 공통 MCP 및 설정 공유 | ✅ 95% |
 | **효율성** | 가벼운 설정 | 필수 설정만 포함 | ✅ 100% |
 | **확장성** | 새 도구 쉽게 추가 | 표준화된 구조 | ✅ 95% |
 | **문서화** | 체계적 기록 관리 | 표준 규정 수립 | ✅ 90% |
@@ -248,7 +253,7 @@ gemini
 
 **SuperAI 프레임워크**는 fenok-multi-agent의 실패를 교훈 삼아:
 - ❌ 복잡한 의존성 → ✅ 동적 감지 시스템
-- ❌ WSL2 종속성 → ✅ 완전한 크로스 플랫폼  
+- ❌ WSL2 종속성 → ✅ WSL 호환 확보 및 Windows PowerShell 지원  
 - ❌ 하드코딩 경로 → ✅ 자동 경로 해석
 - ❌ 추측 기반 설정 → ✅ 실제 형식 준수
 

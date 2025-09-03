@@ -34,11 +34,11 @@
         "-y",
         "@modelcontextprotocol/server-filesystem",
         "--root",
-        "C:\\Users\\eunta\\agents-workspace",
+        ".",
         "--root",
-        "C:\\Users\\eunta\\.claude",
+        ".claude",
         "--root",
-        "C:\\Users\\eunta\\.codex"
+        ".codex"
       ]
     }
   },
