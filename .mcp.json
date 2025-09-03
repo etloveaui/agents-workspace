@@ -3,36 +3,52 @@
     "filesystem": {
       "command": "npx",
       "args": [
-        "-y", "@modelcontextprotocol/server-filesystem",
-        "--root", ".",
-        "--root", ".claude",
-        "--root", ".gemini"
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "--root",
+        ".",
+        "--root",
+        ".claude"
       ],
       "env": {}
     },
     "context7": {
       "command": "npx",
-      "args": ["-y", "@upstash/context7-mcp"],
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
       "env": {}
     },
     "sequential-thinking": {
-      "command": "npx", 
-      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
       "env": {}
     },
     "playwright": {
       "command": "npx",
-      "args": ["-y", "@playwright/mcp"],
-      "env": {}
-    },
-    "serena": {
-      "command": "C:\\Users\\eunta\\.local\\bin\\serena-mcp-server.exe",
-      "args": [],
+      "args": [
+        "-y",
+        "@playwright/mcp"
+      ],
       "env": {}
     },
     "hello-mcp": {
       "command": "node",
-      "args": ["servers/hello-mcp/index.js"],
+      "args": [
+        "servers/hello-mcp/index.js"
+      ],
+      "env": {}
+    },
+    "ide": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-ide"
+      ],
       "env": {}
     }
   }

@@ -1,0 +1,12 @@
+{
+  "name": "agents-workspace",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP server workspace with environment-agnostic configuration",
+  "scripts": {
+    "setup-mcp": "node scripts/setup-mcp.js",
+    "check-mcp": "node scripts/setup-mcp.js check"
+  },
+  "keywords": ["mcp", "claude", "agents"],
+  "private": true
+}

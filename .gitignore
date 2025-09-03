@@ -1,2 +1,5 @@
 # Ignore archived/legacy project directory
 old_project/
+
+# Ignore independent git project directories
+project/
