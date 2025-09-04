@@ -1,0 +1,4 @@
+https://cookbook.openai.com/examples/gpt-5/prompt-optimization-cookbook
+https://cookbook.openai.com/examples/gpt-5/gpt-5_frontend
+https://cookbook.openai.com/examples/gpt-5/gpt-5_new_params_and_tools
+https://cookbook.openai.com/examples/gpt-5/gpt-5_prompting_guide
