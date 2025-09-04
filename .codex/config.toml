@@ -10,19 +10,16 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 # 승인 정책 및 샌드박스
-approval_policy = "never"
+approval_policy = "on-request"
 sandbox_mode = "workspace-write"
 
 [sandbox_workspace_write]
 network_access = true
 
 [mcp_servers.filesystem]
-command = "npx"
+command = "C:/Users/eunta/AppData/Roaming/npm/mcp-server-filesystem.cmd"
 args = [
-  "-y", "@modelcontextprotocol/server-filesystem",
-  "--root", ".",
-  "--root", ".claude",
-  "--root", ".gemini"
+  "--root", "C:/Users/eunta/agents-workspace"
 ]
 
 
