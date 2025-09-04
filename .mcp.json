@@ -6,7 +6,9 @@
         "-y",
         "@modelcontextprotocol/server-filesystem",
         "--root",
-        "."
+        ".",
+        "--root",
+        ".claude"
       ],
       "env": {}
     },
