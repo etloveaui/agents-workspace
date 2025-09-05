@@ -1,0 +1,28 @@
+day,slot,start,end,area,activity,poi_ids,notes
+D1,arrival,08:10,10:45,Airport,진에어 LJ0357 ICN→SHI 도착,P010,좌석 K36S3W. 위탁수하물 15KG
+D1,pickup,10:45,11:30,Airport,렌터카 픽업,,국제면허증 준비. 렌터카 예약 필요
+D1,drive,11:30,12:30,Transport,공항→힐튼 이동,,25분 거리
+D1,checkin,12:30,14:00,Hotel,힐튼 오키나와 미야코지마 체크인,P011,조기 체크인 및 호텔 시설 탐방
+D1,hotel_facilities,14:00,18:00,Hotel,호텔 내부 시설 활용,P011,수영장 4곳+스파+피트니스+레스토랑 탐방
+D1,dinner,18:00,20:30,Hotel,힐튼 내 레스토랑,P011,호텔 4개 레스토랑 중 선택. 이그제큐티브 라운지 이용
+D2,breakfast,08:00,09:00,Hotel,힐튼 내 레스토랑 애저 조식,P011,1층 레스토랑
+D2,hotel_activity,09:00,11:00,Hotel,호텔 내부 시설 최대 활용,P011,수영장 활용+스파 체험(예약 필요)
+D2,lunch,11:30,13:00,Hotel,호텔 내 이탈리아 레스토랑,P011,호텔 내 레스토랑 식사
+D2,relax,13:00,14:30,Hotel,객실 휴식 및 짐 정리,P011,리조트 간 이동 준비
+D2,checkout,14:30,15:00,Hotel,힐튼 체크아웃,P011,체크아웃 완료 후 론살드로 이동
+D2,checkin,15:00,16:00,Irabu,Ronsard Resort IRABU 체크인,P012,독채 리조트 체크인. 예약 ID: 1645388963
+D2,villa_time,16:00,19:00,Villa,독채+프라이빗 수영장 활용,P012,독채 특성 최대한 활용. 프라이빗 수영장
+D2,dinner,19:00,21:00,Villa,리조트 내 또는 근처 식사,P012,독채 화얼 코스 또는 근처 한식
+D3,breakfast,08:30,09:30,Resort,리조트 조식,,
+D3,island,10:00,12:00,Kurima,구라마지마 투어,P006,한적한 섬 드라이브
+D3,beach,12:30,14:30,Yonaha,요나하마에하마,P009,17km 백사장
+D3,lunch,14:30,15:30,Market,공설시장 점심,P004,현지 해산물
+D3,shopping,15:30,16:30,Market,기념품 쇼핑,P004,
+D3,theme,17:00,19:00,Ueno,독일문화촌,P008,테마파크
+D3,checkin,19:30,20:30,Miyako,Apartment Hotel 11,P012,3-4일차 숙소
+D4,free,09:00,16:00,Free,자유 일정 (여자친구 서프라이즈 준비),,여자친구 모르는 좋은 곳 발굴 및 서프라이즈 준비
+D4,surprise_prep,16:00,17:30,Secret,여자친구 서프라이즈 준비,,비밀 준리 시간
+D4,farewell,18:00,21:00,Special,특별한 저녁식사+서프라이즈,,여자친구를 위한 스페셜 디너
+D5,checkout,09:00,10:00,Hotel,Apartment Hotel 11 체크아웃,P013,짐 정리 및 출발 준비
+D5,return,10:00,11:00,Airport,렌터카 반납,,연료 충전 확인. 공항까지 25분
+D5,departure,11:45,14:25,Airport,진에어 LJ0358 SHI→ICN 출발,P010,좌석 K36S3W. 2시간 40분 비행

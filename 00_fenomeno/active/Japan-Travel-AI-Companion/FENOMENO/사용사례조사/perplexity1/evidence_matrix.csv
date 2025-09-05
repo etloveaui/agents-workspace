@@ -1,0 +1,9 @@
+id,source,title,date,key_finding,model_version,reliability
+web:11,QCall AI,ChatGPT Voice Mode Review: Complete Guide 2025,2025-06-23,"Voice recognition accuracy exceeds 95% in quiet environments, hallucinates 33-48% of responses","GPT-4o mini (free), GPT-4o (paid)",0.8
+web:34,동아일보,챗GPT와 일본 여행… 기대 이상의 편리함,2025-03-07,"파파고·구글 번역기보다 자연스러운 번역, 손글씨는 번역 실패",GPT-4 터보,0.9
+web:8,DataStudios,ChatGPT's Advanced Voice Mode Upgrade (June 2025),2025-06-08,"Real-time multilingual translation, lower latency, full platform parity",GPT-4o Advanced Voice Mode,0.8
+web:9,OpenAI,Introducing gpt-realtime and Realtime API updates,2025-08-27,"232-320ms response time, MCP server support, image inputs, SIP phone calling",gpt-realtime,1.0
+web:124,OpenAI Help Center,ChatGPT — Release Notes,2025-09-03,"CC captions available for model responses on iOS/Android, occasional audio quality decreases",Advanced Voice Mode,1.0
+web:122,Reddit JapanTravelTips,Chat GPT over Google Translate,2024-10-10,"실제 사용자: 메뉴/표지판 번역 우수, 소음 환경에서 음성 번역 어려움",ChatGPT (model unclear),0.7
+web:125,Reddit JapanTravel,First Time in Japan - Reflections,2025-07-18,ChatGPT가 Google Lens보다 맥락 고려한 번역 제공,ChatGPT (model unclear),0.7
+web:36,Toolify AI,ChatGPT 음성 번역 기능: 여행 필수 앱으로 변신!,2025-08-21,"ChatGPT Plus 월 20달러 필요, 50+ 언어 지원, 실시간 번역",ChatGPT Plus,0.6

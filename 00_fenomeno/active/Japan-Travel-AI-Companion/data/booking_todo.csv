@@ -1,0 +1,9 @@
+item,category,priority,deadline,status,notes
+렌터카 예약,transport,critical,ASAP,pending,국제면허증 준비. 공항 픽업/반납
+힐튼 스파 예약,wellness,high,체크인 당일,pending,커플 트리트먼트 추천. 투리바 스파
+힐튼 레스토랑 예약,dining,high,여행 전,pending,4개 레스토랑 중 선택. 이그제큐티브 라운지 가능 여부
+D4 서프라이즈 디너 예약,special,critical,D3까지,pending,여자친구 서프라이즈용. 특별한 장소
+힐튼 조기 체크인 확인,accommodation,medium,여행 전,pending,12:30 조기 체크인 가능 여부
+론살드 리조트 조식 확인,dining,low,여행 전,pending,독채 조식 서비스 여부
+여자친구 서프라이즈 계획,special,high,D3까지,planning,비밀 장소 및 내용 기획
+D4 자유일정 구체화,planning,medium,여행 전,pending,여자친구 취향 맞춤 장소 리서치

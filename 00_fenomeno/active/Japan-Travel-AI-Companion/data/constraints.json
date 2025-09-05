@@ -1,0 +1,67 @@
+{
+  "traveler_info": {
+    "name": "김은태 (KIM EUN TAI)",
+    "passport": "M837S8460",
+    "birth_date": "1985/10/28",
+    "gender": "M"
+  },
+  "flight_info": {
+    "outbound": {
+      "date": "2025-09-27",
+      "flight": "LJ0357",
+      "departure": "08:10 ICN",
+      "arrival": "10:45 SHI",
+      "seat": "K36S3W",
+      "baggage": "15KG"
+    },
+    "return": {
+      "date": "2025-10-01",
+      "flight": "LJ0358", 
+      "departure": "11:45 SHI",
+      "arrival": "14:25 ICN",
+      "seat": "K36S3W"
+    }
+  },
+  "accommodation_strategy": {
+    "day1": {
+      "hotel": "힐튼 미야코지마",
+      "date": "2025-09-27~28",
+      "strategy": "호텔 내부 시설 집중 활용",
+      "note": "프리미엄 호텔 서비스 최대한 활용, 외부 이동 최소화"
+    },
+    "day2": {
+      "hotel": "Ronsard Resort IRABU",
+      "date": "2025-09-28~29", 
+      "booking_id": "1645388963",
+      "checkin": "15:00",
+      "checkout": "11:00",
+      "strategy": "독채 + 프라이빗 수영장 집중 활용",
+      "note": "독채 특성 활용한 프라이빗 시간, 수영장 활용"
+    },
+    "day3_4": {
+      "hotel": "Apartment Hotel 11 Miyakojima",
+      "date": "2025-09-29~10-01",
+      "booking_id": "1400820177391778",
+      "strategy": "외부 활동 + 여자친구 서프라이즈 준비"
+    }
+  },
+  "diet": [],
+  "allergy": [],
+  "budget_meal": "3000-5000JPY",
+  "budget_daily": "20000JPY",
+  "avoid": ["long_queue", "crowded_places"],
+  "prefer": ["premium_hotel_services", "private_experiences", "girlfriend_surprises", "photo_spots"],
+  "transportation": "rental_car",
+  "language_level": "beginner_japanese",
+  "travel_style": "luxury_relaxed",
+  "todo_tasks": [
+    "렌트카 예약",
+    "여자친구 모르는 좋은 곳 발굴",
+    "여자친구 취향 맞춤 장소 리서치"
+  ],
+  "emergency_contacts": {
+    "korea_mobile": "",
+    "emergency_contact_name": "",
+    "blood_type": ""
+  }
+}

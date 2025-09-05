@@ -1,0 +1,106 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "day": "D1",
+        "route_name": "공항→숙소",
+        "estimated_time": "20분",
+        "distance": "15km"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [125.1456, 24.8267],
+          [125.2801, 24.8012]
+        ]
+      }
+    },
+    {
+      "type": "Feature", 
+      "properties": {
+        "day": "D2",
+        "route_name": "숙소→이라부대교→도리이케→해변",
+        "estimated_time": "1시간",
+        "distance": "35km"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [125.2801, 24.8012],
+          [125.2234, 24.8012],
+          [125.1234, 24.8487],
+          [125.2792, 24.7327]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "day": "D2",
+        "route_name": "해변→Ronsard Resort",
+        "estimated_time": "25분", 
+        "distance": "18km"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [125.2792, 24.7327],
+          [125.1987, 24.8245]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "day": "D3", 
+        "route_name": "리조트→구라마지마→요나하마에하마→시장",
+        "estimated_time": "1시간 30분",
+        "distance": "45km"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [125.1987, 24.8245],
+          [125.2123, 24.7234],
+          [125.2598, 24.7201], 
+          [125.2811, 24.8001]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "day": "D3",
+        "route_name": "시장→독일문화촌→아파트호텔",
+        "estimated_time": "45분",
+        "distance": "25km" 
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [125.2811, 24.8001],
+          [125.3234, 24.7456],
+          [125.2801, 24.8012]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "day": "D5",
+        "route_name": "숙소→공항 (출발)",
+        "estimated_time": "20분",
+        "distance": "15km"
+      },
+      "geometry": {
+        "type": "LineString", 
+        "coordinates": [
+          [125.2801, 24.8012],
+          [125.1456, 24.8267]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+day,slot,start,end,activity,location,reference,notes
+D1,departure,08:10,08:10,진에어 LJ0357 출발,ICN 인천국제공항,좌석 K36S3W,위탁수하물 15KG
+D1,arrival,10:45,10:45,진에어 LJ0357 도착,SHI 시모지시마공항,P010,2시간 35분 비행
+D2,checkout,14:30,15:00,힐튼 체크아웃,힐튼 오키나와 미야코지마,P011,체크아웃 후 론살드로 이동
+D2,checkin,15:00,15:00,론살드 리조트 체크인,Ronsard Resort IRABU,P012,예약 ID: 1645388963
+D3,checkout,11:00,11:00,론살드 리조트 체크아웃,Ronsard Resort IRABU,P012,체크아웃 시간 준수 필수
+D5,checkout,10:00,10:00,아파트호텔 체크아웃,Apartment Hotel 11,P013,예약번호: 1400820177391778
+D5,departure,11:45,11:45,진에어 LJ0358 출발,SHI 시모지시마공항,P010,좌석 K36S3W
+D5,arrival,14:25,14:25,진에어 LJ0358 도착,ICN 인천국제공항,좌석 K36S3W,2시간 40분 비행
