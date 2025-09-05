@@ -1,4 +1,71 @@
 {
-    "chatgpt.openOnStartup": false,
-    "task.allowAutomaticTasks": "on"
+  "chatgpt.openOnStartup": false,
+  "task.allowAutomaticTasks": "on",
+  "chatgpt.config": {
+    // 1. 확인 덜 물어보게
+    "approval_policy": "auto",
+
+    // 2. 샌드박스 해제 (클로드처럼)
+    "sandbox_mode": "off",
+
+    // 3. 네트워크 허용
+    "sandbox_workspace_write": { "network_access": true },
+
+    // 4. 현재 프로젝트 신뢰
+    "projects": {
+      "${workspaceFolder}": { "trust_level": "trusted" }
+    },
+
+    // 5. MCP 서버들 (사용자 제공 최종안 반영)
+    "mcp_servers": {
+      "filesystem": {
+        "command": "cmd",
+        "args": [
+          "/c",
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-filesystem"
+        ],
+        "env": {}
+      },
+      "context7": {
+        "command": "cmd",
+        "args": [
+          "/c",
+          "npx",
+          "-y",
+          "@upstash/context7-mcp"
+        ],
+        "env": {}
+      },
+      "sequential-thinking": {
+        "command": "cmd",
+        "args": [
+          "/c",
+          "npx",
+          "-y",
+          "@modelcontextprotocol/server-sequential-thinking"
+        ],
+        "env": {}
+      },
+      "playwright": {
+        "command": "cmd",
+        "args": [
+          "/c",
+          "npx",
+          "-y",
+          "@playwright/mcp"
+        ],
+        "env": {}
+      },
+      "serena": {
+        "command": "cmd",
+        "args": [
+          "/c",
+          "%USERPROFILE%\\.local\\bin\\serena-mcp-server.exe"
+        ],
+        "env": {}
+      }
+    }
+  }
 }

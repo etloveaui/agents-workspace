@@ -1,28 +1,45 @@
-# SuperCodex 프로젝트 설정 (자동 생성)
-# 사용자: eunta
+# SuperCodex 프로젝트 설정
+# 사용자: (USERPROFILE 기반)
 # 프로젝트: agents-workspace
 
 # 신뢰 프로젝트
-[projects."C:\\Users\\eunta"]
+[projects."%USERPROFILE%"]
 trust_level = "trusted"
 
-[projects."C:\\Users\\eunta\\agents-workspace"]
+[projects."%USERPROFILE%\\agents-workspace"]
 trust_level = "trusted"
 
 # 승인 정책 및 샌드박스
-approval_policy = "on-request"
+approval_policy = "never"
 sandbox_mode = "workspace-write"
 
 [sandbox_workspace_write]
 network_access = true
 
+# --- MCP Servers ---
+
 [mcp_servers.filesystem]
-command = "C:/Users/eunta/AppData/Roaming/npm/mcp-server-filesystem.cmd"
+command = "cmd"
 args = [
-  "--root", "C:/Users/eunta/agents-workspace"
+  "/c", "npx", "-y", "@modelcontextprotocol/server-filesystem",
+  "--root", "%USERPROFILE%/agents-workspace",
+  "--root", "%USERPROFILE%/.claude",
+  "--root", "%USERPROFILE%/.gemini"
 ]
 
-
 [mcp_servers.sequential]
-command = "npx"
-args = ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+command = "cmd"
+args = ["/c", "npx", "-y", "@modelcontextprotocol/server-sequential-thinking"]
+
+[mcp_servers.playwright]
+command = "cmd"
+args = ["/c", "npx", "-y", "@playwright/mcp"]
+
+[mcp_servers.context7]
+command = "cmd"
+args = ["/c", "npx", "-y", "@upstash/context7-mcp"]
+
+[mcp_servers.serena]
+command = "serena-mcp-server.exe"
+args = []
+env = { PATH = "%USERPROFILE%\\.local\\bin;%PATH%" }

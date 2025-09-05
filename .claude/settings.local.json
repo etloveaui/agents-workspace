@@ -99,7 +99,12 @@
       "Read(/C:\\Users\\etlov\\agents-workspace\\00_fenomeno\\active\\Japan-Travel-AI-Companion\\INFO/**)",
       "Read(/C:\\Users\\etlov\\agents-workspace\\00_fenomeno\\active\\Japan-Travel-AI-Companion\\INFO/**)",
       "Read(/C:\\Users\\etlov\\agents-workspace\\00_fenomeno\\active\\Japan-Travel-AI-Companion\\INFO/**)",
-      "Read(/C:\\Users\\etlov\\agents-workspace\\00_fenomeno\\active\\Japan-Travel-AI-Companion\\INFO/**)"
+      "Read(/C:\\Users\\etlov\\agents-workspace\\00_fenomeno\\active\\Japan-Travel-AI-Companion\\INFO/**)",
+      "mcp__filesystem__read_media_file",
+      "mcp__filesystem__edit_file",
+      "mcp__filesystem__write_file",
+      "Bash(del:*)",
+      "mcp__filesystem__move_file"
     ]
   },
   "enableAllProjectMcpServers": true,
